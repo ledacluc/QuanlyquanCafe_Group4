@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace QuanlyquanCafe_Group4
 {
-    public partial class Form1: Form
+    public partial class fAccountProfile: Form
     {
-        public Form1()
+        public fAccountProfile()
         {
             InitializeComponent();
+        }
+
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
