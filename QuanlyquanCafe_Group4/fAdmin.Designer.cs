@@ -159,7 +159,7 @@
             this.tcAdmin.SelectedIndex = 0;
             this.tcAdmin.Size = new System.Drawing.Size(920, 545);
             this.tcAdmin.TabIndex = 0;
-            this.tcAdmin.SelectedIndexChanged += new System.EventHandler(this.tcAdmin_SelectedIndexChanged);
+
             // 
             // tpBill
             // 
@@ -263,7 +263,7 @@
             this.dtgrvBill.RowTemplate.Height = 28;
             this.dtgrvBill.Size = new System.Drawing.Size(892, 455);
             this.dtgrvBill.TabIndex = 0;
-            this.dtgrvBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+           
             // 
             // tpAccount
             // 
@@ -296,7 +296,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(557, 48);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+          
             // 
             // panel5
             // 
@@ -385,7 +385,7 @@
             this.txbSearchFoodName.Size = new System.Drawing.Size(216, 22);
             this.txbSearchFoodName.TabIndex = 2;
             this.txbSearchFoodName.Text = "vui lòng nhập tên...";
-            this.txbSearchFoodName.TextChanged += new System.EventHandler(this.txbFoodName_TextChanged);
+           
             // 
             // panel7
             // 
@@ -517,7 +517,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(557, 48);
             this.panel11.TabIndex = 2;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+           
             // 
             // btnDeleteCategory
             // 
@@ -781,7 +781,7 @@
             this.label9.Size = new System.Drawing.Size(108, 21);
             this.label9.TabIndex = 0;
             this.label9.Text = "Trạng thái: ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+          
             // 
             // cbTableStatus
             // 
@@ -918,7 +918,7 @@
             this.btnAddAccount.TabIndex = 0;
             this.btnAddAccount.Text = "Thêm ";
             this.btnAddAccount.UseVisualStyleBackColor = true;
-            this.btnAddAccount.Click += new System.EventHandler(this.button4_Click);
+        
             // 
             // panel24
             // 
@@ -969,7 +969,7 @@
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
-            this.Load += new System.EventHandler(this.fAdmin_Load);
+         
             this.tcAdmin.ResumeLayout(false);
             this.tpBill.ResumeLayout(false);
             this.tpFood.ResumeLayout(false);
