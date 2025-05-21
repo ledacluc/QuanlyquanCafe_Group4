@@ -14,21 +14,19 @@ namespace QuanlyquanCafe_Group4.DAO
    
         public DataTable ExecuteQuery(string query) 
         {
-            SqlConnection connection = new SqlConnection(connectionSTR);
-
-            
-
-            connection.Open();
-
-            SqlCommand command = new SqlCommand(query, connection);
-
             DataTable data = new DataTable();
 
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+               
+                connection.Open();
 
-            adapter.Fill(data);
-            connection.Close();
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
 
+                adapter.Fill(data);
+                connection.Close();
+            }
             return data;
 
         }
