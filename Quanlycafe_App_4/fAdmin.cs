@@ -26,9 +26,9 @@ namespace QuanlyquanCafe_Group4
         {
             string query = "select * from dbo.Account";
 
-            DataProvider provider = new DataProvider();
 
-            dtgrvAccount.DataSource = provider.ExecuteQuery(query); 
+
+            dtgrvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query); 
         }
 
     }

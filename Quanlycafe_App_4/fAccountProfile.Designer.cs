@@ -1,6 +1,6 @@
 ﻿namespace QuanlyquanCafe_Group4
 {
-    partial class fAccountProfile
+    public partial class fAccountProfile
     {
         /// <summary>
         /// Required designer variable.

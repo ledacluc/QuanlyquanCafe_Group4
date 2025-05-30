@@ -1,6 +1,6 @@
 ﻿namespace QuanlyquanCafe_Group4
 {
-    partial class fLogin
+    public partial class fLogin
     {
         /// <summary>
         /// Required designer variable.
