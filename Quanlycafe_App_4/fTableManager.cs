@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,6 +46,24 @@ namespace QuanlyquanCafe_Group4
                 return new Account(data.Rows[0]);
             }
             return null;
+        }
+        public bool InsertAccount(string name, string displayName, int type)
+        {
+            string query = string.Format("insert dbo.Account { UserName, DisplayName, Type }values (N'{0}', N'{1}', {2})", name, displayName, type);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool UpdateAccount(string name, string displayName)
+        {
+            string query = string.Format("update dbo.Account set DisplayName = N'{1}'  where UserName = N'{0}'", name, displayName);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool DeleteAccount(string name)
+        {
+            string query = string.Format("update dbo.Account set UserName = N'{0}'", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
         }
     }
     public class Account

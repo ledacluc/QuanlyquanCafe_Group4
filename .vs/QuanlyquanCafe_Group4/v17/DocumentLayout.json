@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\QuanlyquanCafe_Group4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\DAO\\DataProvider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Quanlycafe_App_4\\DAO\\DataProvider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Quanlycafe_App_4\\fLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fTableManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Quanlycafe_App_4\\fTableManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fAccountProfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Quanlycafe_App_4\\fAccountProfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fAdmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Quanlycafe_App_4\\fAdmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fTableManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Quanlycafe_App_4\\fTableManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,67 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "fAdmin.cs",
-              "DocumentMoniker": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fAdmin.cs",
-              "RelativeDocumentMoniker": "Quanlycafe_App_4\\fAdmin.cs",
-              "ToolTip": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fAdmin.cs",
-              "RelativeToolTip": "Quanlycafe_App_4\\fAdmin.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAawCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T12:52:14.055Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataProvider.cs",
-              "DocumentMoniker": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\DAO\\DataProvider.cs",
-              "RelativeDocumentMoniker": "Quanlycafe_App_4\\DAO\\DataProvider.cs",
-              "ToolTip": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\DAO\\DataProvider.cs",
-              "RelativeToolTip": "Quanlycafe_App_4\\DAO\\DataProvider.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T12:34:52.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "fAccountProfile.cs",
               "DocumentMoniker": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fAccountProfile.cs",
               "RelativeDocumentMoniker": "Quanlycafe_App_4\\fAccountProfile.cs",
               "ToolTip": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fAccountProfile.cs",
               "RelativeToolTip": "Quanlycafe_App_4\\fAccountProfile.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAACUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T08:15:56.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "fLogin.cs",
-              "DocumentMoniker": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fLogin.cs",
-              "RelativeDocumentMoniker": "Quanlycafe_App_4\\fLogin.cs",
-              "ToolTip": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fLogin.cs",
-              "RelativeToolTip": "Quanlycafe_App_4\\fLogin.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T04:21:10.425Z",
+              "WhenOpened": "2025-05-29T08:15:56.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "fTableManager.cs",
               "DocumentMoniker": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fTableManager.cs",
               "RelativeDocumentMoniker": "Quanlycafe_App_4\\fTableManager.cs",
               "ToolTip": "C:\\QuanlyquanCafe_Group4\\Quanlycafe_App_4\\fTableManager.cs",
               "RelativeToolTip": "Quanlycafe_App_4\\fTableManager.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAUwF4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T04:50:32.051Z",
               "EditorCaption": ""

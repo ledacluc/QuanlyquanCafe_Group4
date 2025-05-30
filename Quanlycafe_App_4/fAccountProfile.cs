@@ -40,14 +40,24 @@ namespace QuanlyquanCafe_Group4
             txtDisplayName.Text = LoginAccount.DisplayName;
         }
 
-        public fAccountProfile(Account acc)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
-            LoginAccount = acc;
-
+            string userName = txbUserName.Text;
+            string displayName = txtDisplayName.Text;
+            UpdateAccount(userName, displayName);
         }
 
-
+        void UpdateAccount(string name, string displayName)
+        {
+            if(AccountDAO.Instance.UpdateAccount(name, displayName))
+            {
+                MessageBox.Show("Cập nhật thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật không thành công");
+            }
+        }
 
 
 
@@ -55,5 +65,6 @@ namespace QuanlyquanCafe_Group4
         {
             this.Close();
         }
+        
     }
 }

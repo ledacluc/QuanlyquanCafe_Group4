@@ -26,8 +26,6 @@ namespace QuanlyquanCafe_Group4
         {
             string query = "select * from dbo.Account";
 
-
-
             dtgrvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query); 
         }
 
