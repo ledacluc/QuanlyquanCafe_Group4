@@ -40,7 +40,13 @@ namespace QuanlyquanCafe_Group4
             txtDisplayName.Text = LoginAccount.DisplayName;
         }
 
-        
+        public fAccountProfile(Account acc)
+        {
+            InitializeComponent();
+            LoginAccount = acc;
+
+        }
+
 
 
 
