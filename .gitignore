@@ -9,6 +9,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+# Ignore application configuration files
+Quanlycafe_App_4/App.config
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
