@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanlyquanCafe_Group4", "QuanlyquanCafe_Group4.csproj", "{64D46998-9777-495E-B106-9886BF17BAE6}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Quancafe4DB_Schema", "..\Quancafe4DB_Schema\Quancafe4DB_Schema.sqlproj", "{33DCD3C2-3D9F-481E-AE90-A259E970445B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64D46998-9777-495E-B106-9886BF17BAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D46998-9777-495E-B106-9886BF17BAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D46998-9777-495E-B106-9886BF17BAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D46998-9777-495E-B106-9886BF17BAE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DCD3C2-3D9F-481E-AE90-A259E970445B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DCD3C2-3D9F-481E-AE90-A259E970445B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DCD3C2-3D9F-481E-AE90-A259E970445B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{33DCD3C2-3D9F-481E-AE90-A259E970445B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DCD3C2-3D9F-481E-AE90-A259E970445B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DCD3C2-3D9F-481E-AE90-A259E970445B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0856D2C0-19EB-47A9-9B7F-7A03EEB9F572}
+	EndGlobalSection
+EndGlobal

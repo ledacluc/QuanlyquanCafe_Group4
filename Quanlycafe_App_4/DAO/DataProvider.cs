@@ -29,7 +29,7 @@ namespace QuanlyquanCafe_Group4.DAO
         private DataProvider() { }
 
         // Chuỗi kết nối từ App.config
-        private string connectionSTR = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+        private string connectionSTR = ConfigurationManager.ConnectionStrings["QuanLyQuanCafeDB"].ConnectionString;
 
 
         public DataTable ExecuteQuery(string query, object[] parameter = null) 
