@@ -72,5 +72,6 @@
     <Build Include="dbo\Tables\BILL.sql" />
     <Build Include="dbo\Tables\Billinfo.sql" />
     <Build Include="dbo\Stored Procedures\USP_GetAccountByUsername.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Login.sql" />
   </ItemGroup>
 </Project>
