@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace QuanlyquanCafe_Group4.DAO
 {
@@ -27,9 +28,10 @@ namespace QuanlyquanCafe_Group4.DAO
 
         private DataProvider() { }
 
-        private string connectionSTR =  "Data Source=DESKTOP-2TPSMI9;Initial Catalog=Quanlyquancafe;Integrated Security=True;TrustServerCertificate=True";
+        // Chuỗi kết nối từ App.config
+        private string connectionSTR = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
 
-        
+
         public DataTable ExecuteQuery(string query, object[] parameter = null) 
         {
             DataTable data = new DataTable();

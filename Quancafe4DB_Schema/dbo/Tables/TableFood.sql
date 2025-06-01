@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[TableFood] (
+    [Id]     INT            IDENTITY (1, 1) NOT NULL,
+    [Name]   NVARCHAR (100) DEFAULT (N'CHUA DAT TEN BAN') NOT NULL,
+    [Status] NVARCHAR (100) DEFAULT (N'TRONG') NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
