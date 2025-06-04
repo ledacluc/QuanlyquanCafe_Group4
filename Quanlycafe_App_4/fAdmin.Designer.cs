@@ -913,6 +913,7 @@
             this.btnDeleteAccount.TabIndex = 3;
             this.btnDeleteAccount.Text = "Xóa";
             this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // btnReadAccount
             // 
