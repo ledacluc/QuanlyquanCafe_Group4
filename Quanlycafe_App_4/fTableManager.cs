@@ -11,6 +11,48 @@ using QuanlyquanCafe_Group4.DAO;
 
 namespace QuanlyquanCafe_Group4
 {
+    public partial class fTableManager : Form
+    {
+
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set
+            {
+                loginAccount = value;
+                ChangeAccount(loginAccount.Type);
+            }
+        }
+        public fTableManager(Account acc)
+        {
+            InitializeComponent();
+            this.LoginAccount = acc;
+
+        }
+        void ChangeAccount(int Type)
+        {
+            adminToolStripMenuItem.Enabled = Type == 1; // Kiểm tra quyền admin
+
+        }
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            fAccountProfile f = new fAccountProfile(LoginAccount);
+            f.ShowDialog();
+        }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fAdmin f = new fAdmin(LoginAccount);
+            f.ShowDialog();
+        }
+    }
     public class AccountDAO
     {
 
@@ -45,6 +87,36 @@ namespace QuanlyquanCafe_Group4
                 return new Account(data.Rows[0]);
             }
             return null;
+        }
+        public bool InsertAccount(string name, string displayName, int type)
+        {
+            string query = string.Format("insert dbo.Account ( UserName, DisplayName, Type) values (N'{0}', N'{1}', {2})", name, displayName, type);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool UpdateAccount1(string name, string displayName)
+        {
+            string query = string.Format("update dbo.Account set DisplayName = N'{1}' where UserName = N'{0}'", name, displayName);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool UpdateAccount2(string name, string displayName, int type)
+        {
+            string query = string.Format("update dbo.Account set DisplayName = N'{1}', Type = {2} where UserName = N'{0}'", name, displayName, type);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool DeleteAccount(string name)
+        {
+            string query = string.Format("update dbo.Account set UserName = N'{0}'", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool ResetPassword(string oldPassword, string newPassword)
+        {
+            string query = string.Format("update dbo.Account set PassWord = N'{0}' where Password = N'{1}'", newPassword, oldPassword);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
         }
     }
     public class Account
@@ -82,47 +154,6 @@ namespace QuanlyquanCafe_Group4
         }
     }
 
-    public partial class fTableManager: Form
-    {
-
-        private Account loginAccount;
-        public Account LoginAccount
-        {
-            get { return loginAccount; }
-            set 
-            { 
-                loginAccount = value;
-                ChangeAccount(loginAccount.Type);
-            }
-        }
-        public fTableManager(Account acc)
-        {
-            InitializeComponent();
-            this.LoginAccount = acc;
-
-        }
-        void ChangeAccount(int Type)
-        {
-            adminToolStripMenuItem.Enabled = Type == 1; // Kiểm tra quyền admin
-
-        }
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            fAccountProfile f = new fAccountProfile(LoginAccount);
-            f.ShowDialog();
-        }
-
-        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fAdmin f = new fAdmin();
-            f.ShowDialog();
-        }
-    }
+   
 }
  

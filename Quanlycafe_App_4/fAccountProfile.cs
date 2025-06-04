@@ -49,5 +49,38 @@ namespace QuanlyquanCafe_Group4
         {
             this.Close();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string displayName = txtDisplayName.Text;
+            string userName = txbUserName.Text;
+            string oldPassword = txtPassWord.Text;
+            string newPass = txtNewPassWord.Text;
+            string reNewPass = txtReEnterPassWord.Text;
+            
+            if (newPass == null || reNewPass == null || newPass != reNewPass)
+            {
+                MessageBox.Show("Mật khẩu không khớp");
+                return;
+            }
+            else
+            {
+                EditAccount(userName, displayName, oldPassword, newPass);
+            }
+                
+
+        }
+        void EditAccount(string userName, string displayName, string oldPassword, string newPassword)
+        {
+            if (AccountDAO.Instance.UpdateAccount1(userName, displayName) && AccountDAO.Instance.ResetPassword(oldPassword, newPassword))
+            {
+                MessageBox.Show("Cập nhật thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại");
+            }
+        }
+ 
     }
 }
