@@ -11,6 +11,48 @@ using QuanlyquanCafe_Group4.DAO;
 
 namespace QuanlyquanCafe_Group4
 {
+    public partial class fTableManager : Form
+    {
+
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set
+            {
+                loginAccount = value;
+                ChangeAccount(loginAccount.Type);
+            }
+        }
+        public fTableManager(Account acc)
+        {
+            InitializeComponent();
+            this.LoginAccount = acc;
+
+        }
+        void ChangeAccount(int Type)
+        {
+            adminToolStripMenuItem.Enabled = Type == 1; // Kiểm tra quyền admin
+
+        }
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            fAccountProfile f = new fAccountProfile(LoginAccount);
+            f.ShowDialog();
+        }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fAdmin f = new fAdmin();
+            f.ShowDialog();
+        }
+    }
     public class AccountDAO
     {
 
@@ -82,47 +124,93 @@ namespace QuanlyquanCafe_Group4
         }
     }
 
-    public partial class fTableManager: Form
+
+    public class FoodDAO
     {
+        private static FoodDAO instance;
 
-        private Account loginAccount;
-        public Account LoginAccount
+        public static FoodDAO Instance
         {
-            get { return loginAccount; }
-            set 
-            { 
-                loginAccount = value;
-                ChangeAccount(loginAccount.Type);
+            get { if (instance == null) instance = new FoodDAO(); return FoodDAO.instance;  }
+
+            private set { FoodDAO.instance = value; }
+        }
+        private FoodDAO() { }
+
+        public List<Food> GetFoodByCategoryID()
+        {
+            List<Food> List = new List<Food>();
+            string query = " Select * from FoodCategory where IdCategory = N{0} ";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Food food = new Food(item);
+                List.Add(food);
             }
+            return List;
         }
-        public fTableManager(Account acc)
+        public List<Food> GetListFood()
         {
-            InitializeComponent();
-            this.LoginAccount = acc;
-
+            List<Food> List = new List<Food>();
+            string query = " Select * from Food ";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Food food = new Food(item);
+                List.Add(food);
+            }
+            return List;
         }
-        void ChangeAccount(int Type)
+    }
+    public class Food
+    {
+        public Food(int iD, string name, int categoryiD, float price)
         {
-            adminToolStripMenuItem.Enabled = Type == 1; // Kiểm tra quyền admin
-
+            this.ID = iD;
+            this.Name = name;
+            this.CategoryiD = categoryiD;
+            this.Price = price;
         }
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        public Food(DataRow row)
         {
-            this.Close();
+            this.ID = (int)row["id"];
+            this.Name = row["name"].ToString();
+            this.CategoryiD = (int)row["IdCategory"];
+            this.Price = (float)Convert.ToDouble(row["price"].ToString());
         }
-
-        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        private float price;
+        public float Price
         {
-
-            fAccountProfile f = new fAccountProfile(LoginAccount);
-            f.ShowDialog();
+            get { return price; }
+            set { price = value; }
         }
-
-        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        private int categoryiD;
+        public int CategoryiD
         {
-            fAdmin f = new fAdmin();
-            f.ShowDialog();
+            get { return categoryiD; }
+            set { categoryiD = value; }
         }
+        private int iD;
+        public int ID
+        {
+            get { return iD; }
+            set { iD = value; }
+        }
+
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        private string status;
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+
     }
 }
  

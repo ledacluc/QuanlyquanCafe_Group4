@@ -12,24 +12,43 @@ using System.Windows.Forms;
 
 namespace QuanlyquanCafe_Group4
 {
-    public partial class fAdmin: Form
+    public partial class fAdmin : Form
     {
         public fAdmin()
         {
             InitializeComponent();
 
             loadAccountList();
+            
+
         }
 
-        void loadAccountList() 
+        void loadAccountList()
 
         {
             string query = "select * from dbo.Account";
 
-
-
-            dtgrvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query); 
+            dtgrvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        }
+        void LoadListFood()
+        {
+          
+            dtgrvFood.DataSource = FoodDAO.Instance.GetListFood();
+        }
+        void LoadListFoodCategpry()
+        {
+            
+            dtgrvCatagory.DataSource = FoodDAO.Instance.GetFoodByCategoryID();
         }
 
+        private void btnReadFood_Click(object sender, EventArgs e)
+        {
+            LoadListFood();
+        }
+
+        private void btnReadCategory_Click(object sender, EventArgs e)
+        {
+            LoadListFoodCategpry();
+        }
     }
 }
