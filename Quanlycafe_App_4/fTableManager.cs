@@ -49,7 +49,8 @@ namespace QuanlyquanCafe_Group4
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAdmin f = new fAdmin(LoginAccount);
+            fAdmin f = new fAdmin();
+            f.loginAccount = LoginAccount;
             f.ShowDialog();
         }
     }
@@ -108,7 +109,7 @@ namespace QuanlyquanCafe_Group4
         }
         public bool DeleteAccount(string name)
         {
-            string query = string.Format("update dbo.Account set UserName = N'{0}'", name);
+            string query = string.Format("delete from dbo.Account where UserName = N'{0}'", name);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -117,6 +118,10 @@ namespace QuanlyquanCafe_Group4
             string query = string.Format("update dbo.Account set PassWord = N'{0}' where Password = N'{1}'", newPassword, oldPassword);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
+        }
+        public DataTable GetAccountList()
+        {
+            return DataProvider.Instance.ExecuteQuery("SELECT UserName, DisplayName, Type FROM dbo.Account");
         }
     }
     public class Account

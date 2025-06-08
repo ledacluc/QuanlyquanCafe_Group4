@@ -15,59 +15,41 @@ namespace QuanlyquanCafe_Group4
 {
     public partial class fAdmin : Form
     {
-        private Account loginAccount;
-        public Account LoginAccount
-        {
-            get { return loginAccount; }
-            set
-            {
-                loginAccount = value;
-                changeAccount(loginAccount);
-            }
-        }
-        public fAdmin(Account acc)
+        public Account loginAccount;
+        BindingSource accountList = new BindingSource();
+        public fAdmin()
         {
             InitializeComponent();
-            LoginAccount = acc;
+
+            load();
+            
+        }
+        void load()
+        {
+            dtgrvAccount.DataSource = accountList;
+
             loadAccountList();
             AddAccountBinding();
         }
-        void changeAccount(Account acc)
-        {
-            if (LoginAccount == null) return;
-            txbUserName.Text = LoginAccount.UserName;
-            txbDisplayName.Text = LoginAccount.DisplayName;
-        }
+      
         void loadAccountList()
         {
-            string query = "select UserName, DisplayName, Type from dbo.Account";
+            accountList.DataSource = AccountDAO.Instance.GetAccountList();
 
-            dtgrvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
         void AddAccountBinding()
         {
+            txbUserName.DataBindings.Clear();
+            txbDisplayName.DataBindings.Clear();
+            numericUpDown1.DataBindings.Clear();
+
             txbUserName.DataBindings.Add(new Binding("Text", dtgrvAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
             txbDisplayName.DataBindings.Add(new Binding("Text", dtgrvAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
             numericUpDown1.DataBindings.Add(new Binding("Value", dtgrvAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
         }
 
-        //private void btnDeleteAccount_Click(object sender, EventArgs e)
-        //{
-        //    string userName = txbUserName.Text;
-        //    deleteAccount(userName);
-        //}
-        //void deleteAccount(string userName)
-        //{
-        //    if (AccountDAO.Instance.DeleteAccount(userName))
-        //    {
-        //        MessageBox.Show("cập nhật thành công");
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("cập nhật không  thành công");
-        //    }
-
-        //}
+        
+      
 
         private void btnEditAccount_Click(object sender, EventArgs e)
         {
@@ -86,7 +68,7 @@ namespace QuanlyquanCafe_Group4
             {
                 MessageBox.Show("cập nhật không  thành công");
             }
-
+            loadAccountList();
         }
 
         private void btnAddAccount_Click(object sender, EventArgs e)
@@ -106,7 +88,30 @@ namespace QuanlyquanCafe_Group4
             {
                 MessageBox.Show("thêm tài khoản không thành công");
             }
+            loadAccountList();
+        }
 
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            string userNamee = txbUserName.Text;
+            deleteAccount(userNamee);
+        }
+        void deleteAccount(string userName)
+        {
+            if(loginAccount.UserName.Equals(userName))
+            {
+                MessageBox.Show("không thể xóa tài khoản đang đăng nhập");
+                return;
+            }
+            if (AccountDAO.Instance.DeleteAccount(userName))
+            {
+                MessageBox.Show("xóa tài khoản thành công");
+            }
+            else
+            {
+                MessageBox.Show("xóa tài khoản không  thành công");
+            }
+            loadAccountList();
         }
     }
 }
