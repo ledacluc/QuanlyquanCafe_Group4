@@ -11,6 +11,53 @@ using QuanlyquanCafe_Group4.DAO;
 
 namespace QuanlyquanCafe_Group4
 {
+    public partial class fTableManager : Form
+    {
+
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set
+            {
+                loginAccount = value;
+                ChangeAccount(loginAccount.Type);
+            }
+        }
+        public fTableManager(Account acc)
+        {
+            InitializeComponent();
+            this.LoginAccount = acc;
+
+        }
+        void ChangeAccount(int Type)
+        {
+            adminToolStripMenuItem.Enabled = Type == 1; // Kiểm tra quyền admin
+
+        }
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            fAccountProfile f = new fAccountProfile(LoginAccount);
+            f.ShowDialog();
+        }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fAdmin f = new fAdmin();
+            f.ShowDialog();
+        }
+
+        private void fTableManager_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
     public class AccountDAO
     {
 
@@ -82,47 +129,6 @@ namespace QuanlyquanCafe_Group4
         }
     }
 
-    public partial class fTableManager: Form
-    {
-
-        private Account loginAccount;
-        public Account LoginAccount
-        {
-            get { return loginAccount; }
-            set 
-            { 
-                loginAccount = value;
-                ChangeAccount(loginAccount.Type);
-            }
-        }
-        public fTableManager(Account acc)
-        {
-            InitializeComponent();
-            this.LoginAccount = acc;
-
-        }
-        void ChangeAccount(int Type)
-        {
-            adminToolStripMenuItem.Enabled = Type == 1; // Kiểm tra quyền admin
-
-        }
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            fAccountProfile f = new fAccountProfile(LoginAccount);
-            f.ShowDialog();
-        }
-
-        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fAdmin f = new fAdmin();
-            f.ShowDialog();
-        }
-    }
+    
 }
  

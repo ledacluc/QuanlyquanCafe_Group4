@@ -9,7 +9,7 @@
 
         /// <summary>
         /// Clean up any resources being used.
-        /// </summary>
+        /// </summary>  
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
@@ -86,14 +86,14 @@
             // thôngTinCáNhânToolStripMenuItem
             // 
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
             this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -245,6 +245,7 @@
             this.Name = "fTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ QUÁN CAFE";
+            this.Load += new System.EventHandler(this.fTableManager_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);

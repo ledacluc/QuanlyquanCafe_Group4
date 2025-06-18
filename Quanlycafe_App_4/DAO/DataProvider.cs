@@ -130,11 +130,5 @@ namespace QuanlyquanCafe_Group4.DAO
 
         }
 
-
-
-
-
-
-
     }
 }

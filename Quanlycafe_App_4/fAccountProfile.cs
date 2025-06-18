@@ -8,7 +8,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QuanlyquanCafe_Group4;
 namespace QuanlyquanCafe_Group4
 {
 
@@ -39,10 +39,6 @@ namespace QuanlyquanCafe_Group4
             txbUserName.Text = LoginAccount.UserName;
             txtDisplayName.Text = LoginAccount.DisplayName;
         }
-
-        
-
-
 
 
         private void btnExit_Click(object sender, EventArgs e)

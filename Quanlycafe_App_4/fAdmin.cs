@@ -18,6 +18,7 @@ namespace QuanlyquanCafe_Group4
         {
             InitializeComponent();
 
+
             loadAccountList();
         }
 
