@@ -143,7 +143,7 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Thành tiền";
+            this.columnHeader3.Text = "Đơn giá";
             this.columnHeader3.Width = 110;
             // 
             // panel3
@@ -200,6 +200,7 @@
             this.btnPayment.TabIndex = 3;
             this.btnPayment.Text = "Thanh toán ";
             this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // panel4
             // 
@@ -255,6 +256,7 @@
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(197, 27);
             this.cbCategory.TabIndex = 0;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // flpTable
             // 

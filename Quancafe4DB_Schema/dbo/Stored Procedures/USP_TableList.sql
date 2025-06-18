@@ -1,0 +1,4 @@
+﻿
+CREATE PROC USP_TableList
+AS SELECT * FROM dbo.TableFood
+GO
