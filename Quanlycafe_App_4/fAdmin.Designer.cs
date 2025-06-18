@@ -39,7 +39,7 @@
             this.tpFood = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.nmFoodPrice = new System.Windows.Forms.NumericUpDown();
+            this.nmPrice = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.cbFoodCategory = new System.Windows.Forms.ComboBox();
@@ -116,7 +116,7 @@
             this.tpFood.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmFoodPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmPrice)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -250,7 +250,7 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.nmFoodPrice);
+            this.panel10.Controls.Add(this.nmPrice);
             this.panel10.Controls.Add(this.label4);
             this.panel10.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel10.Location = new System.Drawing.Point(4, 149);
@@ -258,18 +258,18 @@
             this.panel10.Size = new System.Drawing.Size(330, 42);
             this.panel10.TabIndex = 3;
             // 
-            // nmFoodPrice
+            // nmPrice
             // 
-            this.nmFoodPrice.Location = new System.Drawing.Point(107, 3);
-            this.nmFoodPrice.Maximum = new decimal(new int[] {
+            this.nmPrice.Location = new System.Drawing.Point(107, 3);
+            this.nmPrice.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
-            this.nmFoodPrice.Name = "nmFoodPrice";
-            this.nmFoodPrice.Size = new System.Drawing.Size(220, 29);
-            this.nmFoodPrice.TabIndex = 1;
-            this.nmFoodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nmPrice.Name = "nmPrice";
+            this.nmPrice.Size = new System.Drawing.Size(220, 29);
+            this.nmPrice.TabIndex = 1;
+            this.nmPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -356,6 +356,7 @@
             this.txbFoodID.ReadOnly = true;
             this.txbFoodID.Size = new System.Drawing.Size(220, 29);
             this.txbFoodID.TabIndex = 1;
+            this.txbFoodID.TextChanged += new System.EventHandler(this.txbFoodID_TextChanged);
             // 
             // label1
             // 
@@ -415,6 +416,7 @@
             this.btnDeleteFood.TabIndex = 3;
             this.btnDeleteFood.Text = "Xóa";
             this.btnDeleteFood.UseVisualStyleBackColor = true;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click);
             // 
             // btnReadFood
             // 
@@ -425,6 +427,7 @@
             this.btnReadFood.TabIndex = 2;
             this.btnReadFood.Text = "Xem";
             this.btnReadFood.UseVisualStyleBackColor = true;
+            this.btnReadFood.Click += new System.EventHandler(this.btnReadFood_Click);
             // 
             // btnEditFood
             // 
@@ -435,6 +438,7 @@
             this.btnEditFood.TabIndex = 1;
             this.btnEditFood.Text = "Sửa";
             this.btnEditFood.UseVisualStyleBackColor = true;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
             // 
             // btnAddFood
             // 
@@ -445,6 +449,7 @@
             this.btnAddFood.TabIndex = 0;
             this.btnAddFood.Text = "Thêm ";
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // panel1
             // 
@@ -572,6 +577,7 @@
             this.btnDeleteCategory.TabIndex = 3;
             this.btnDeleteCategory.Text = "Xóa";
             this.btnDeleteCategory.UseVisualStyleBackColor = true;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
             // 
             // btnReadCategory
             // 
@@ -582,6 +588,7 @@
             this.btnReadCategory.TabIndex = 2;
             this.btnReadCategory.Text = "Xem";
             this.btnReadCategory.UseVisualStyleBackColor = true;
+            this.btnReadCategory.Click += new System.EventHandler(this.btnReadCategory_Click);
             // 
             // btnEditCategory
             // 
@@ -592,6 +599,7 @@
             this.btnEditCategory.TabIndex = 1;
             this.btnEditCategory.Text = "Sửa";
             this.btnEditCategory.UseVisualStyleBackColor = true;
+            this.btnEditCategory.Click += new System.EventHandler(this.btnEditCategory_Click);
             // 
             // btnAddCategory
             // 
@@ -602,6 +610,7 @@
             this.btnAddCategory.TabIndex = 0;
             this.btnAddCategory.Text = "Thêm ";
             this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // tpTable
             // 
@@ -967,7 +976,7 @@
             this.panel6.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmFoodPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmPrice)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -1047,7 +1056,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbFoodCategory;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.NumericUpDown nmFoodPrice;
+        private System.Windows.Forms.NumericUpDown nmPrice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel15;
